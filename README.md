@@ -1,13 +1,11 @@
-# redis-docker
+# cdn-static
 
 #### 介绍
-这是一个 redis docker ，请使用 docker-compose 跑起来，根据自己的需求进行配置，配置信息在 .env 文件配置
+这是一个邱少 cdn 静态资源仓库，关注邱少博客：[邱少羽梦](https://www.qiushaocloud.top)
 
-#### 使用说明
-
-1.  配置 .env
-2.  运行 ./run-docker.sh
-3.  查看日志: docker logs qiushaocloud-redis-server
+#### 资源使用
+* 访问https：https://cdn.jsdelivr.net/gh/qiushaocloud/cdn-static/仓库文件相对路径 【如：https://cdn.jsdelivr.net/gh/qiushaocloud/cdn-static/blog/img/251639846805_.pic-3dd6860b31cb482597fc082cd8ec74c1.jpg】
+* 访问http：http://cdn.jsdelivr.net/gh/qiushaocloud/cdn-static/仓库文件相对路径 【如：http://cdn.jsdelivr.net/gh/qiushaocloud/cdn-static/blog/img/251639846805_.pic-3dd6860b31cb482597fc082cd8ec74c1.jpg】
 
 #### 参与贡献
 

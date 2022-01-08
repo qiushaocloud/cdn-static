@@ -1,8 +1,11 @@
 # cdn-static
 
 #### introduce
-This is a Qiu Shao cdn static resource warehouse, follow Qiu Shao's blog: [qiushaocloud](https://www.qiushaocloud.top)
+This is a Qiu Shao cdn static resource warehouse, follow Qiu Shao's blog: [Qiushao Cloud](https://www.qiushaocloud.top)
 
+#### Resource usage
+* Visit https: https://cdn.jsdelivr.net/gh/qiushaocloud/cdn-static/relative path of warehouse file [eg: https://cdn.jsdelivr.net/gh/qiushaocloud/cdn-static/blog/img/251639846805_.pic-3dd6860b31cb482597fc082cd8ec74c1.jpg]
+* Visit http:http://cdn.jsdelivr.net/gh/qiushaocloud/cdn-static/relative path of warehouse file [eg: http://cdn.jsdelivr.net/gh/qiushaocloud/cdn-static/blog/img/251639846805_.pic-3dd6860b31cb482597fc082cd8ec74c1.jpg]
 
 #### Contribute
 
