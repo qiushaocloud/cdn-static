@@ -1,0 +1,29 @@
+alias k='minikube kubectl'
+
+# 切换命名空间
+alias kcd='minikube kubectl config set-context $(minikube kubectl config current-context) --namespace'
+
+alias kg='minikube kubectl get'
+alias kgpo='minikube kubectl get pods'
+alias kgdep='minikube kubectl get deployment'
+alias kgcm='minikube kubectl get configmap'
+alias kgsvc='minikube kubectl get service'
+alias kgns='minikube kubectl get namespaces'
+alias kgno='minikube kubectl get nodes'
+alias kgposl='minikube kubectl get pods --show-labels'
+
+alias kd='minikube kubectl describe'
+alias kdno='minikube kubectl describe nodes'
+alias kdsvc='minikube kubectl describe service'
+alias kdns='minikube kubectl describe namespaces'
+
+alias krm='minikube kubectl delete'
+alias krmpo='minikube kubectl delete pods'
+alias krmsvc='minikube kubectl delete service'
+alias krmcm='minikube kubectl delete configmap'
+alias krmns='minikube kubectl delete namespaces'
+alias krmdep='minikube kubectl delete deployment'
+
+alias ka='minikube kubectl apply --recursive -f'
+
+alias kex='minikube kubectl exec -i -t'
