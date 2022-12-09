@@ -42,7 +42,9 @@ EOF
 
 function install_minikube() {
     echo "正在下载安装minikube-linux-amd64..."
+    rm -rf minikube-linux-amd64
     curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+    [ ! -f ./minikube-linux-amd64 ] && echo "no download latest minikube, need download backup file" && curl -LO http://qiushaocloud.top/minikube-linux-amd64
     sudo install minikube-linux-amd64 /usr/local/bin/minikube
     echo "正在启动minikube..."
     minikube delete
