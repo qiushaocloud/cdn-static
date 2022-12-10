@@ -44,7 +44,7 @@ function install_minikube() {
     echo "正在下载安装minikube-linux-amd64..."
     rm -rf minikube-linux-amd64
     curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
-    [ ! -f ./minikube-linux-amd64 ] && echo "download latest minikube fail, need download backup file" && curl -LO http://qiushaocloud.top/minikube-linux-amd64
+    [ ! -f ./minikube-linux-amd64 ] && echo "download latest minikube fail, need download backup file" && curl -LO http://www.qiushaocloud.top/minikube-linux-amd64
     sudo install minikube-linux-amd64 /usr/local/bin/minikube
     echo "正在启动minikube..."
     minikube delete
@@ -56,7 +56,7 @@ function install_minikube() {
 function install_kubectl() {
   echo "正在下载安装 kubectl..."
   curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.23.8/bin/linux/amd64/kubectl
-  [ ! -f ./kubectl ] && echo "download kubectl v1.23.8 fail, need download backup file" && curl -LO http://qiushaocloud.top/kubectl
+  [ ! -f ./kubectl ] && echo "download kubectl v1.23.8 fail, need download backup file" && curl -LO http://www.qiushaocloud.top/kubectl
   chmod +x ./kubectl
   sudo mv ./kubectl /usr/local/bin/kubectl
   kubectl version --client
