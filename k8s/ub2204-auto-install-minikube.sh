@@ -65,8 +65,8 @@ function install_kubectl() {
 }
 
 install_docker
-echo "正在安装virtualbox..."
-sudo apt install virtualbox virtualbox-ext-pack -y
+#echo "正在安装virtualbox..."
+#sudo apt install virtualbox virtualbox-ext-pack -y
 install_minikube
 install_kubectl
 echo -e "\n\n"
