@@ -49,7 +49,8 @@ function install_minikube() {
     echo "正在启动minikube..."
     minikube delete
     # --kubernetes-version=v1.23.8 https://github.com/kubernetes/minikube/issues/14477
-    minikube start --kubernetes-version=v1.23.8 --image-mirror-country=cn
+    # minikube start --kubernetes-version=v1.23.8 --image-mirror-country=cn --driver=virtualbox
+    minikube start --kubernetes-version=v1.23.8 --image-mirror-country=cn --driver=docker
     echo "安装minikube完毕..."
 }
 
