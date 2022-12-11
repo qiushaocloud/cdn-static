@@ -2,7 +2,8 @@
 # ~~~~~~~~~
 # Ubuntu 22.04 Minikube install
 # Author: Leo
-# Usage: bash install.sh (不要sudo,使用普通用户)
+# Usage: bash b2204-auto-install-minikube.sh (不要sudo,使用普通用户)
+# 如果安装没成功，请在普通用户下执行 sudo usermod -aG docker "$USER" && newgrp docker，然后再切回普通用户: sudo su {你的用户}
 
 echo "正在准备环境..."
 sudo apt-get update -y
@@ -24,7 +25,7 @@ function install_docker() {
     sudo apt-get update
     sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin -y
     echo "正在添加当前用户${USER}到docker组..."
-    sudo usermod -aG docker "$USER" && newgrp docker
+    sudo usermod -aG docker "$USER" && newgrp docker &
     #sudo usermod -aG docker "$USER" && echo "usermod finsh"
     #newgrp docker && echo "newgrp docker finsh" &
     echo "sleep 5s"
