@@ -92,5 +92,5 @@ minikube kubectl -- get po -A
 # echo 'alias kubectl="minikube kubectl --"' >> ~/.profile
 # source ~/.profile
 echo -e "\n更过信息可参考: https://minikube.sigs.k8s.io/docs/start/"
-    echo '如果安装没成功，请在普通用户下执行 sudo usermod -aG docker "$USER" && newgrp docker，然后再切回普通用户: sudo su {你的用户}，然后再安装一次'
+echo '如果安装没成功，请在普通用户下执行 sudo usermod -aG docker "$USER" && newgrp docker，然后再切回普通用户: sudo su {你的用户}，然后再安装一次'
 
