@@ -25,6 +25,7 @@ function install_docker() {
     sudo apt-get update
     sudo apt-get install docker-ce docker-ce-cli containerd.io docker-compose-plugin -y
     echo "正在添加当前用户${USER}到docker组..."
+    sudo groupadd docker
     sudo usermod -aG docker "$USER" && newgrp docker &
     #sudo usermod -aG docker "$USER" && echo "usermod finsh"
     #newgrp docker && echo "newgrp docker finsh" &
