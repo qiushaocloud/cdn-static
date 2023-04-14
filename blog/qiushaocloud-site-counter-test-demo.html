@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>qiushaocloud site-counter test demo</title>
+    <script>
+        const domainVal = window.prompt('请输入您的域名', '')
+        const secertKeyVal = window.prompt('请输入您的签名key', '')
+
+        if (domainVal) {
+            // 设置格式为：www.qiushaocloud.top 或者 https://www.qiushaocloud.top:443
+            window.localStorage.setItem('qiushaocloud_sitecounter_api_host', domainVal);
+            //window.localStorage.setItem('qiushaocloud_sitecounter_api_host', 'https://www.qiushaocloud.top:443');
+        } else {
+            window.localStorage.removeItem('qiushaocloud_sitecounter_api_host');
+        }
+
+        if (secertKeyVal) {
+            window.QIUSHAOCLOUD_SITE_COUNTER_API_SIGN_SECRET_KEY = secertKeyVal;
+        }
+    </script>
+    <script async src="https://githubcdn.qiushaocloud.top/gh/qiushaocloud/site-counter@master/dist/qiushaocloud_site_counter.min.js"></script>
+</head>
+<body>
+    
+    <p>总访问量: <span id="qiushaocloud_sitecounter_value_site_pv">n</span></p>
+    <p>总访客量: <span id="qiushaocloud_sitecounter_value_site_uv">n</span></p>
+    <p>今日访问量: <span id="qiushaocloud_sitecounter_value_today_site_pv">n</span></p>
+    <p>今日访客量: <span id="qiushaocloud_sitecounter_value_today_site_uv">n</span></p>
+  
+    <p>本页面总访问量: <span id="qiushaocloud_sitecounter_value_site_page_pv">n</span></p>
+    <p>本页面总访客量: <span id="qiushaocloud_sitecounter_value_site_page_uv">n</span></p>
+    <p>本页面今日访问量: <span id="qiushaocloud_sitecounter_value_today_site_page_pv">n</span></p>
+    <p> 本页面今日访客量: <span id="qiushaocloud_sitecounter_value_today_site_page_uv">n</span></p>
+</body>
+</html>
