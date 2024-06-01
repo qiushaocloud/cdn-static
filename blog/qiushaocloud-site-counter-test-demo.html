@@ -4,35 +4,94 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>qiushaocloud site-counter test demo</title>
+    <meta property="og:site_counter_author" content="邱少羽梦">
+    <meta property="og:site_counter_author_blog" content="https://www.qiushaocloud.top">
+    <title>qiushaocloud 网站统计测试</title>
     <script>
-        const domainVal = window.prompt('请输入您的域名【注：为空时使用作者域名】', '')
-        const secertKeyVal = window.prompt('请输入您的签名key【注：为空时使用作者签名key】', '')
+        (function() {
+            var domainVal = window.prompt('请输入您的域名【注：为空时使用作者域名】', '')
+            var secertKeyVal = window.prompt('请输入您的签名key【注：为空时使用作者签名key】', '')
 
-        if (domainVal) {
-            // 设置格式为：www.qiushaocloud.top 或者 https://www.qiushaocloud.top:443
-            window.localStorage.setItem('qiushaocloud_sitecounter_api_host', domainVal);
-            //window.localStorage.setItem('qiushaocloud_sitecounter_api_host', 'https://www.qiushaocloud.top:443');
-        } else {
-            window.localStorage.removeItem('qiushaocloud_sitecounter_api_host');
-        }
+            if (domainVal) {
+                // 设置格式为：www.qiushaocloud.top 或者 https://www.qiushaocloud.top:443
+                window.localStorage.setItem('qiushaocloud_sitecounter_api_host', domainVal);
+                //window.localStorage.setItem('qiushaocloud_sitecounter_api_host', 'https://www.qiushaocloud.top:443');
+            } else {
+                window.localStorage.removeItem('qiushaocloud_sitecounter_api_host');
+            }
 
-        if (secertKeyVal) {
-            window.QIUSHAOCLOUD_SITE_COUNTER_API_SIGN_SECRET_KEY = secertKeyVal;
-        }
+            if (secertKeyVal) {
+                window.QIUSHAOCLOUD_SITE_COUNTER_API_SIGN_SECRET_KEY = secertKeyVal;
+            }
+        })();
     </script>
-    <script async src="https://githubcdn.qiushaocloud.top/gh/qiushaocloud/site-counter@master/dist/qiushaocloud_site_counter.min.js"></script>
+    <script async src="https://githubcdn.qiushaocloud.top/gh/qiushaocloud/site-counter@master/dist/qiushaocloud_site_counter.js?v=3"></script>
 </head>
 <body>
+    <div class="counter-box">
+        <h4>网站统计</h4>
+        <p>总访问量: <span id="qiushaocloud_sitecounter_value_site_pv">n</span></p>
+        <p>总访客量: <span id="qiushaocloud_sitecounter_value_site_uv">n</span></p>
+        <p>今日访问量: <span id="qiushaocloud_sitecounter_value_today_site_pv">n</span></p>
+        <p>今日访客量: <span id="qiushaocloud_sitecounter_value_today_site_uv">n</span></p>
+      
+        <p>本页面总访问量: <span id="qiushaocloud_sitecounter_value_site_page_pv">n</span></p>
+        <p>本页面总访客量: <span id="qiushaocloud_sitecounter_value_site_page_uv">n</span></p>
+        <p>本页面今日访问量: <span id="qiushaocloud_sitecounter_value_today_site_page_pv">n</span></p>
+        <p>本页面今日访客量: <span id="qiushaocloud_sitecounter_value_today_site_page_uv">n</span></p>
+    </div>
+
+    <style>
+        * {
+          padding: 0;
+          margin: 0;
+          box-sizing: border-box;
+        }
     
-    <p>总访问量: <span id="qiushaocloud_sitecounter_value_site_pv">n</span></p>
-    <p>总访客量: <span id="qiushaocloud_sitecounter_value_site_uv">n</span></p>
-    <p>今日访问量: <span id="qiushaocloud_sitecounter_value_today_site_pv">n</span></p>
-    <p>今日访客量: <span id="qiushaocloud_sitecounter_value_today_site_uv">n</span></p>
-  
-    <p>本页面总访问量: <span id="qiushaocloud_sitecounter_value_site_page_pv">n</span></p>
-    <p>本页面总访客量: <span id="qiushaocloud_sitecounter_value_site_page_uv">n</span></p>
-    <p>本页面今日访问量: <span id="qiushaocloud_sitecounter_value_today_site_page_pv">n</span></p>
-    <p> 本页面今日访客量: <span id="qiushaocloud_sitecounter_value_today_site_page_uv">n</span></p>
+        body {
+          font-family: Arial, sans-serif;
+          background-color: #f4f4f4;
+          color: #333;
+          margin: 0;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 100vh;
+        }
+    
+        .counter-box {
+          padding: 30px;
+          background: linear-gradient(to bottom right, #00BCD4, #005792);
+          color: #fff;
+          width: 80%;
+          max-width: 400px;
+          border-radius: 10px;
+          text-align: center;
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+    
+        .counter-box h4 {
+          font-size: 1.8rem;
+          font-weight: bold;
+          margin-bottom: 1.5rem;
+        }
+    
+        .counter-box p {
+          margin: 1rem 0;
+          font-size: 1.1rem;
+          line-height: 1.6;
+        }
+    
+        .counter-box p span {
+          font-weight: bold;
+          color: #ffeb3b;
+        }
+    
+        .counter-box p:nth-child(even) {
+          background-color: rgba(255, 255, 255, 0.1);
+          border-radius: 5px;
+          padding: 0.5rem;
+        }
+    </style>
 </body>
 </html>
