@@ -28,17 +28,36 @@
     <script async src="https://githubcdn.qiushaocloud.top/gh/qiushaocloud/site-counter@master/dist/qiushaocloud_site_counter.js?v=3"></script>
 </head>
 <body>
-    <div class="counter-box">
-        <h4>网站统计</h4>
-        <p>总访问量: <span id="qiushaocloud_sitecounter_value_site_pv">n</span></p>
-        <p>总访客量: <span id="qiushaocloud_sitecounter_value_site_uv">n</span></p>
-        <p>今日访问量: <span id="qiushaocloud_sitecounter_value_today_site_pv">n</span></p>
-        <p>今日访客量: <span id="qiushaocloud_sitecounter_value_today_site_uv">n</span></p>
-      
-        <p>本页面总访问量: <span id="qiushaocloud_sitecounter_value_site_page_pv">n</span></p>
-        <p>本页面总访客量: <span id="qiushaocloud_sitecounter_value_site_page_uv">n</span></p>
-        <p>本页面今日访问量: <span id="qiushaocloud_sitecounter_value_today_site_page_pv">n</span></p>
-        <p>本页面今日访客量: <span id="qiushaocloud_sitecounter_value_today_site_page_uv">n</span></p>
+    <div class="container">
+        <div class="link-box">
+            <h4 id="在线演示站点">在线演示站点</h4>
+            <ul>
+                <li><a href="https://www.qiushaocloud.top/2022/01/10/site-counter" target="_blank" rel="noopener noreferrer nofollow">邱少羽梦博客演示站点: https://www.qiushaocloud.top/2022/01/10/site-counter</a></li>
+                <li><a href="https://github.com/qiushaocloud/cdn-static/blob/master/blog/qiushaocloud-site-counter-test-demo.html" target="_blank" rel="noopener noreferrer nofollow">测试 demo 代码地址: https://github.com/qiushaocloud/cdn-static/blob/master/blog/qiushaocloud-site-counter-test-demo.html</a></li>
+                <li><a href="https://www.qiushaocloud.top/common-static/qiushaocloud-site-counter-test-demo.html" target="_blank" rel="noopener noreferrer nofollow">测试 demo 效果地址: https://www.qiushaocloud.top/common-static/qiushaocloud-site-counter-test-demo.html</a></li>
+                <li>代码中 <code>examples</code> 目录下有更多的使用示例
+                    <ul>
+                        <li><a href="https://www.qiushaocloud.top/common-static/site-counter/examples/complex.html" target="_blank" rel="noopener noreferrer nofollow">示例 complex.html 演示</a>：<a href="https://github.com/qiushaocloud/site-counter/blob/master/examples/complex.html" target="_blank" rel="noopener noreferrer nofollow">代码</a></li>
+                        <li><a href="https://www.qiushaocloud.top/common-static/site-counter/examples/simple.html" target="_blank" rel="noopener noreferrer nofollow">示例 simple.html 演示</a>：<a href="https://github.com/qiushaocloud/site-counter/blob/master/examples/simple.html" target="_blank" rel="noopener noreferrer nofollow">代码</a></li>
+                        <li><a href="https://www.qiushaocloud.top/common-static/site-counter/examples/ips-stats-search.html" target="_blank" rel="noopener noreferrer nofollow">示例 ips-stats-search.html 演示</a>：<a href="https://github.com/qiushaocloud/site-counter/blob/master/examples/ips-stats-search.html" target="_blank" rel="noopener noreferrer nofollow">代码 ips-stats-search.html</a> 和 <a href="https://www.qiushaocloud.top/common-static/site-counter/examples/ips-stats-iframe.html?qpage=self" target="_blank" rel="noopener noreferrer nofollow">示例 ips-stats-iframe.html 演示</a>：<a href="https://github.com/qiushaocloud/site-counter/blob/master/examples/ips-stats-iframe.html" target="_blank" rel="noopener noreferrer nofollow">代码 ips-stats-iframe.html</a></li>
+                        <li><a href="https://www.qiushaocloud.top/common-static/site-counter/examples/custom-development.html" target="_blank" rel="noopener noreferrer nofollow">示例 custom-development.html 演示</a>：<a href="https://github.com/qiushaocloud/site-counter/blob/master/examples/custom-development.html" target="_blank" rel="noopener noreferrer nofollow">代码</a></li>
+                        <li><a href="https://www.qiushaocloud.top/common-static/site-counter/examples/only-elements.html" target="_blank" rel="noopener noreferrer nofollow">示例 only-elements.html 演示</a>：<a href="https://github.com/qiushaocloud/site-counter/blob/master/examples/only-elements.html" target="_blank" rel="noopener noreferrer nofollow">代码</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+
+        <div class="counter-box">
+            <h4>网站统计</h4>
+            <p>总访问量: <span id="qiushaocloud_sitecounter_value_site_pv">n</span></p>
+            <p>总访客量: <span id="qiushaocloud_sitecounter_value_site_uv">n</span></p>
+            <p>今日访问量: <span id="qiushaocloud_sitecounter_value_today_site_pv">n</span></p>
+            <p>今日访客量: <span id="qiushaocloud_sitecounter_value_today_site_uv">n</span></p>
+            <p>本页面总访问量: <span id="qiushaocloud_sitecounter_value_site_page_pv">n</span></p>
+            <p>本页面总访客量: <span id="qiushaocloud_sitecounter_value_site_page_uv">n</span></p>
+            <p>本页面今日访问量: <span id="qiushaocloud_sitecounter_value_today_site_page_pv">n</span></p>
+            <p>本页面今日访客量: <span id="qiushaocloud_sitecounter_value_today_site_page_uv">n</span></p>
+        </div>
     </div>
 
     <style>
@@ -47,46 +66,73 @@
           margin: 0;
           box-sizing: border-box;
         }
-    
+
         body {
           font-family: Arial, sans-serif;
           background-color: #f4f4f4;
           color: #333;
           margin: 0;
           display: flex;
+          flex-direction: column;
           align-items: center;
           justify-content: center;
-          height: 100vh;
+          min-height: 100vh;
+          padding: 20px;
         }
-    
-        .counter-box {
-          padding: 30px;
+
+        .container {
+          width: 100%;
+          max-width: 800px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 20px;
+        }
+
+        .link-box, .counter-box {
           background: linear-gradient(to bottom right, #00BCD4, #005792);
           color: #fff;
-          width: 80%;
-          max-width: 400px;
+          padding: 20px;
           border-radius: 10px;
-          text-align: center;
+          width: 100%;
           box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
         }
-    
-        .counter-box h4 {
+
+        .link-box h4, .counter-box h4 {
           font-size: 1.8rem;
           font-weight: bold;
-          margin-bottom: 1.5rem;
+          margin-bottom: 1rem;
         }
-    
+
+        .link-box ul {
+          list-style: none;
+          padding: 0;
+        }
+
+        .link-box ul li {
+          margin: 10px 0;
+        }
+
+        .link-box ul li a {
+          color: #ffeb3b;
+          text-decoration: none;
+        }
+
+        .link-box ul li a:hover {
+          text-decoration: underline;
+        }
+
         .counter-box p {
-          margin: 1rem 0;
+          margin: 10px 0;
           font-size: 1.1rem;
           line-height: 1.6;
         }
-    
+
         .counter-box p span {
           font-weight: bold;
           color: #ffeb3b;
         }
-    
+
         .counter-box p:nth-child(even) {
           background-color: rgba(255, 255, 255, 0.1);
           border-radius: 5px;
